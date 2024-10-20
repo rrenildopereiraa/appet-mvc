@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Appet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+</head>
+<body>
+    <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7">
+        <nav class="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 md:px-6 md:px-8 mx-auto">
+            <div class="md:col-span-3">
+                <a class="flex-none text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
+                   asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="size-8" src="https://raw.githubusercontent.com/rrenildopereiraa/appet/master/icon.ico" alt="Appet Icon" />
+                </a>
+            </div>
+
+            <div class="flex items-center gap-x-1 md:gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">
+                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium bg-white border border-gray-200 text-black hover:bg-gray-100">
+                    Sign in
+                </button>
+                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium border border-transparent bg-sky-400 text-white hover:bg-sky-500">
+                    Sign up
+                </button>
+
+                <div class="md:hidden">
+                    <button type="button" class="size-[38px] flex justify-center items-center text-sm font-semibold border border-gray-200 text-black hover:bg-gray-100">
+                        <svg class="shrink-0 size-4" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+                            <path d="M3 5H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 19H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden overflow-hidden duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6">
+                <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
+                    <div>
+                        <a class="relative inline-block text-black" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </div>
+                    <div>
+                        <a class="inline-block text-black hover:text-gray-600" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                    </div>
+                    <div>
+                        <a class="inline-block text-black hover:text-gray-600" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

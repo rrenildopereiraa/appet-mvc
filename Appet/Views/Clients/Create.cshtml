@@ -1,0 +1,43 @@
+﻿@model ClientDto
+@{
+    <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <div class="mx-auto max-w-2xl">
+            <div class="text-center">
+                <h2 class="text-xl font-bold text-gray-800 sm:text-3xl">Add Client</h2>
+                <p class="mt-1 text-gray-600 text-lg font-semibold">
+                    Manage all of the pets owners.
+                </p>
+            </div>
+
+            <div class="relative z-10 mt-5 border bg-white p-4 sm:mt-10 md:p-10">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-4 sm:mb-8">
+                        <label class="mb-2 block text-sm font-medium">Full name</label>
+                        <input asp-for="Name" class="block w-full border border-gray-200 px-4 py-3 text-sm" type="text" placeholder="Full name" />
+                        <span class="text-red-500" asp-validation-for="Name"></span>
+                    </div>
+
+                    <div class="mb-4 sm:mb-8">
+                        <label class="mb-2 block text-sm font-medium">Address</label>
+                        <input asp-for="Address" class="block w-full border border-gray-200 px-4 py-3 text-sm" type="text" placeholder="Address" />
+                        <span class="text-red-500" asp-validation-for="Address"></span>
+                    </div>
+
+                    <div class="mb-4 sm:mb-8">
+                        <label class="mb-2 block text-sm font-medium">Phone</label>
+                        <input asp-for="Phone" class="block w-full border border-gray-200 px-4 py-3 text-sm" type="tel" placeholder="Phone" />
+                        <span class="text-red-500" asp-validation-for="Phone"></span>
+                    </div>
+
+                    <div class="mt-6 grid">
+                        <button type="submit" class="inline-flex w-full items-center justify-center gap-x-2 border border-transparent bg-sky-600 px-4 py-3 text-sm font-medium text-white hover:bg-sky-700">Add new user</button>
+                    </div>
+
+                    <div class="mt-3 grid">
+                        <a class="inline-flex w-full items-center justify-center gap-x-2 border border-gray-200 px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100" asp-area="" asp-controller="Home" asp-action="Index">Back to home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+}

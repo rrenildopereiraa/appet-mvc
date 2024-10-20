@@ -1,0 +1,111 @@
+@use "sass:math";
+
+$yma-interaction-utils: (
+  "appearance": (
+    "prefix": "a",
+    "values": (
+      "auto": auto,
+      "none": none,
+    ),
+  ),
+
+  "cursor": (
+    "prefix": "c",
+    "values": (
+      "auto": auto,
+      "ch": crosshair,
+      "cr": col-resize,
+      "d": default,
+      "h": help,
+      "m": move,
+      "na": not-allowed,
+      "ner": ne-resize,
+      "neswr": nesw-resize,
+      "none": none,
+      "nr": n-resize,
+      "nwr": nw-resize,
+      "nwser": nwse-resize,
+      "p": pointer,
+      "pr": progress,
+      "rs": row-resize,
+      "ser": se-resize,
+      "sr": s-resize,
+      "swr": sw-resize,
+      "t": text,
+      "w": wait,
+      "wr": w-resize,
+      "zi": zoom-in,
+      "zo": zoom-out,
+    ),
+  ),
+
+  "pointer-events": (
+    "prefix": "pe",
+    "values": (
+      "auto": auto,
+      "none": none,
+    ),
+  ),
+
+  "resize": (
+    "prefix": "r",
+    "values": (
+      "b": both,
+      "h": horizontal,
+      "none": none,
+      "v": vertical,
+    ),
+  ),
+
+  "user-select": (
+    "prefix": "us",
+    "values": (
+      "a": all,
+      "auto": auto,
+      "none": none,
+      "t": text,
+    ),
+  ),
+);
+
+// base variants
+@each $property, $map in $yma-interaction-utils {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if ($k == "default") {
+      .#{$prefix} {
+        #{$property}: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+    }
+  }
+
+  // hover variants
+  @each $k, $v in $values {
+    @if ($k == "default") {
+      .h\:#{$prefix}:hover {
+        #{$property}: $v;
+      }
+    } @else {
+      .h\:#{$prefix}-#{$k}:hover {
+        #{$property}: $v;
+      }
+    }
+  }
+
+  // responsive variants
+  @each $bp, $bp-value in $yma-breakpoints {
+    @each $k, $v in $values {
+      .#{$bp}\:#{$prefix}-#{$k} {
+        @media (min-width: $bp-value) {
+          #{$property}: $v;
+        }
+      }
+    }
+  }
+}
