@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="https://github.com/rrenildopereiraa/appet/blob/master/icon.ico" height="64" alt="Appet Logo">
+  <img src="https://github.com/rrenildopereiraa/appet-mvc/blob/master/icon.ico" height="64" alt="Appet Logo">
 </p>
 <h3 align="center">Appet</h3>
 <p align="center">
   Manage your veterinary clinic efficiently with Appet.
   <br>
   <br>
-  <a href="https://github.com/rrenildopereiraa/appet/issues">Issues</a>
+  <a href="https://github.com/rrenildopereiraa/appet-mvc/issues">Issues</a>
   •
-  <a href="https://github.com/rrenildopereiraa/appet/discussions">Discussions</a>
+  <a href="https://github.com/rrenildopereiraa/appet-mvc/discussions">Discussions</a>
   •
-  <a href="https://github.com/rrenildopereiraa/appet/wiki">Wiki</a>
+  <a href="https://github.com/rrenildopereiraa/appet-mvc/wiki">Wiki</a>
 </p>
 <p align="center">
   <a href="https://github.com/rrenildopereiraa/appet/blob/main/LICENSE">
