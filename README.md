@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/rrenildopereiraa/appet-mvc/blob/master/icon.ico" height="64" alt="Appet Logo">
+  <img src="https://github.com/rrenildopereiraa/appet/blob/master/icon.ico" height="64" alt="Appet Logo">
 </p>
 <h3 align="center">Appet</h3>
 <p align="center">
