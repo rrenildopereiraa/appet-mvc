@@ -1,5 +1,6 @@
 ﻿using Appet.Models;
 using Appet.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Appet.Controllers
@@ -13,17 +14,20 @@ namespace Appet.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var appointment = _context.Appointments.OrderByDescending(c => c.Id).ToList();
             return View(appointment);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Create(AppointmentDto appointmentDto)
         {
@@ -47,6 +51,7 @@ namespace Appet.Controllers
             return RedirectToAction("Index", "Appointments");
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int id)
         {
             var appointment = _context.Appointments.Find(id);
@@ -70,6 +75,7 @@ namespace Appet.Controllers
             return View(appointmentDto);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Edit(int id, AppointmentDto appointmentDto)
         {
@@ -96,6 +102,7 @@ namespace Appet.Controllers
             return RedirectToAction("Index", "Appointments");
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var vet = _context.Appointments.Find(id);

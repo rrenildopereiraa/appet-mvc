@@ -1,5 +1,7 @@
 using Appet.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Appet.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,10 @@ builder.Services.AddDbContext<AppetContext>(options =>
     var connString = builder.Configuration.GetConnectionString("AppetConnection");
     options.UseSqlServer(connString);
 });
+
+builder.Services.AddDefaultIdentity<AppetUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<AppetContext>();
 
 var app = builder.Build();
 
@@ -32,5 +38,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 
 app.Run();

@@ -34,7 +34,8 @@
 <div class="my-8 px-4">
     <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         <div class="grid gap-3 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-
+            @if (User.IsInRole("Admin"))
+            {
             <a class="flex flex-col border bg-white hover:bg-sky-50" asp-area="" asp-controller="Clients" asp-action="Index">
                 <div class="p-4 md:p-5">
                     <div class="flex gap-x-5">
@@ -66,6 +67,18 @@
                         <div class="grow">
                             <h3 class="font-semibold text-gray-800">Appointment</h3>
                             <p class="text-sm text-gray-500">Manage all customer appointments.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            } 
+            <a class="flex flex-col border bg-white hover:bg-sky-50" asp-area="Identity" asp-page="/Account/Manage/Index">
+                <div class="p-4 md:p-5">
+                    <div class="flex gap-x-5">
+                        <p class="mt-1 size-5 shrink-0 text-gray-800">🧑🏽</p>
+                        <div class="grow">
+                            <h3 class="font-semibold text-gray-800">My Profile</h3>
+                            <p class="text-sm text-gray-500">Manage your personal information.</p>
                         </div>
                     </div>
                 </div>

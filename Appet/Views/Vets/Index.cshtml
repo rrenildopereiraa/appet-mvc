@@ -9,7 +9,10 @@
         </div>
 
         <div class="mb-5 flex justify-between">
-            <a class="inline-flex items-center justify-center gap-x-2 border border-transparent bg-sky-600 px-4 py-3 text-sm font-medium text-white hover:bg-sky-700" asp-controller="Vets" asp-action="Create">Create new Vet</a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a class="inline-flex items-center justify-center gap-x-2 border border-transparent bg-sky-600 px-4 py-3 text-sm font-medium text-white hover:bg-sky-700" asp-controller="Vets" asp-action="Create">Create new vet</a>
+            }
         </div>
 
         <div class="relative z-10">
