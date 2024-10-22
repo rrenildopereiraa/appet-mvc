@@ -20,6 +20,14 @@ builder.Services.AddDefaultIdentity<AppetUser>(options => options.SignIn.Require
 
 var app = builder.Build();
 
+// seed the database
+var scopeFactory = app.Services.GetService<IServiceScopeFactory>();
+using (var scope = scopeFactory?.CreateScope())
+{
+    var seeder = scope?.ServiceProvider.GetService<Seed>();
+    seeder?.SeedAsync().Wait();
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

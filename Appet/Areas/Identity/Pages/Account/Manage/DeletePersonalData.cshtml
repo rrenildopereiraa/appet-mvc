@@ -1,0 +1,33 @@
+﻿@page
+@model DeletePersonalDataModel
+@{
+    ViewData["Title"] = "Delete Personal Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<header>
+    <div class="mb-6">
+        <h3 class="text-2xl font-bold text-center text-gray-900">@ViewData["Title"]</h3>
+        <p class="font-semibold text-red-500 text-center">This action cannot be undone!</p>
+    </div>
+
+    <div class="flex justify-center">
+
+        <form id="delete-user" method="post" class="w-full max-w-md mt-6">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 mb-4"> role="alert"></div>
+            @if (Model.RequirePassword)
+            {
+                <div class="mb-3">
+                    <label asp-for="Input.Password" class="block text-sm font-semibold leading-6 text-gray-900">Password</label>
+                    <input asp-for="Input.Password" class="block w-full border border-gray-300 py-2 text-gray-900" />
+                    <span asp-validation-for="Input.Password" class="text-red-500"></span>
+                </div>
+            }
+            <button class="w-full flex justify-center bg-red-600 px-3 py-2 text-sm font-semibold text-white hover:bg-red-500 text-center" type="submit">Delete data and close my account</button>
+        </form>
+    </div>
+</header>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -11,7 +11,7 @@
         <div class="mb-5 flex justify-between">
             @if (User.IsInRole("Admin"))
             {
-                <a class="inline-flex items-center justify-center gap-x-2 border border-transparent bg-sky-600 px-4 py-3 text-sm font-medium text-white hover:bg-sky-700" asp-controller="Observatories" asp-action="Create">Create new observatory</a>
+                <a class="inline-flex items-center justify-center gap-x-2 border border-transparent bg-sky-600 px-4 py-3 text-sm font-semibold text-white hover:bg-sky-700" asp-controller="Observatories" asp-action="Create">Create new observatory</a>
             }
         </div>
 
@@ -23,11 +23,11 @@
                             <table class="min-w-full divide-y divide-gray-200">
                                 <thead class="bg-gray-50">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">ID</th>
-                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
-                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Location</th>
-                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Telescopes Count</th>
-                                        <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Actions</th>
+                                        <th scope="col" class="px-6 py-3 text-start text-xs font-semibold text-gray-500 uppercase">ID</th>
+                                        <th scope="col" class="px-6 py-3 text-start text-xs font-semibold text-gray-500 uppercase">Name</th>
+                                        <th scope="col" class="px-6 py-3 text-start text-xs font-semibold text-gray-500 uppercase">Location</th>
+                                        <th scope="col" class="px-6 py-3 text-start text-xs font-semibold text-gray-500 uppercase">Telescopes Count</th>
+                                        <th scope="col" class="px-6 py-3 text-end text-xs font-semibold text-gray-500 uppercase">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
@@ -35,12 +35,12 @@
                                     {
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">@observatory.Id</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">@observatory.Name</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-800">@observatory.Name</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">@observatory.Location</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">@observatory.TelescopesCount</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                                                <a class="inline-flex items-center justify-center gap-x-2 border border-transparent text-blue-600 hover:text-blue-800 px-4 py-2 text-sm font-medium" asp-controller="Observatories" asp-action="Edit" asp-route-id="@observatory.Id">Edit</a>
-                                                <a class="inline-flex items-center justify-center gap-x-2 border border-transparent text-red-600 hover:text-red-800 px-4 py-2 text-sm font-medium" onclick="return confirm('Are you absolutely sure you want to remove @observatory.Name?')" asp-controller="Observatories" asp-action="Delete" asp-route-id="@observatory.Id">Delete</a>
+                                            <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-semibold">
+                                                <a class="inline-flex items-center justify-center gap-x-2 border border-transparent text-blue-600 hover:text-blue-800 px-4 py-2 text-sm font-semibold" asp-controller="Observatories" asp-action="Edit" asp-route-id="@observatory.Id">Edit</a>
+                                                <a class="inline-flex items-center justify-center gap-x-2 border border-transparent text-red-600 hover:text-red-800 px-4 py-2 text-sm font-semibold" onclick="return confirm('Are you absolutely sure you want to remove @observatory.Name?')" asp-controller="Observatories" asp-action="Delete" asp-route-id="@observatory.Id">Delete</a>
                                             </td>
                                         </tr>
                                     }

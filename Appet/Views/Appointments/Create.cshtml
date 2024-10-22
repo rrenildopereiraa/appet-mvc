@@ -12,35 +12,35 @@
             <div class="relative z-10 mt-5 border bg-white p-4 sm:mt-10 md:p-10">
                 <form method="post" enctype="multipart/form-data">
                     <div class="mb-4 sm:mb-8">
-                        <label class="mb-2 block text-sm font-medium">Client Name</label>
+                        <label class="mb-2 block text-sm font-semibold">Client Name</label>
                         <input asp-for="ClientName" class="block w-full border border-gray-200 px-4 py-3 text-sm" type="text" placeholder="Client's Name" />
                         <span class="text-red-500" asp-validation-for="ClientName"></span>
                     </div>
 
                     <div class="mb-4 sm:mb-8">
-                        <label class="mb-2 block text-sm font-medium">Vet Name</label>
+                        <label class="mb-2 block text-sm font-semibold">Vet Name</label>
                         <input asp-for="VetName" class="block w-full border border-gray-200 px-4 py-3 text-sm" type="text" placeholder="Vet's Name" />
                         <span class="text-red-500" asp-validation-for="VetName"></span>
                     </div>
 
                     <div class="mb-4 sm:mb-8">
-                        <label class="mb-2 block text-sm font-medium">Appointment Date & Time</label>
+                        <label class="mb-2 block text-sm font-semibold">Appointment Date & Time</label>
                         <input asp-for="AppointmentDateTime" class="block w-full border border-gray-200 px-4 py-3 text-sm" type="datetime-local" />
                         <span class="text-red-500" asp-validation-for="AppointmentDateTime"></span>
                     </div>
 
                     <div class="mb-4 sm:mb-8">
-                        <label class="mb-2 block text-sm font-medium">Notes</label>
+                        <label class="mb-2 block text-sm font-semibold">Notes</label>
                         <textarea asp-for="Notes" class="block w-full border border-gray-200 px-4 py-3 text-sm" placeholder="Additional notes..."></textarea>
                         <span class="text-red-500" asp-validation-for="Notes"></span>
                     </div>
 
                     <div class="mt-6 grid">
-                        <button class="inline-flex w-full items-center justify-center gap-x-2 border border-transparent bg-sky-600 px-4 py-3 text-sm font-medium text-white hover:bg-sky-700" type="submit">Add appointment</button>
+                        <button class="inline-flex w-full items-center justify-center gap-x-2 border border-transparent bg-sky-600 px-4 py-3 text-sm font-semibold text-white hover:bg-sky-700" type="submit">Add appointment</button>
                     </div>
 
                     <div class="mt-3 grid">
-                        <a class="inline-flex w-full items-center justify-center gap-x-2 border border-gray-200 px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-100" asp-area="" asp-controller="Home" asp-action="Index">Back to home</a>
+                        <a class="inline-flex w-full items-center justify-center gap-x-2 border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-600 hover:bg-gray-100" asp-area="" asp-controller="Home" asp-action="Index">Back to home</a>
                     </div>
                 </form>
             </div>

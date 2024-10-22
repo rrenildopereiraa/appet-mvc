@@ -16,7 +16,7 @@
             <div asp-validation-summary="ModelOnly" class="text-red-500" role="alert"></div>
 
             <div>
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email address</label>
                 <div class="mt-2">
                     <input class="block w-full border border-gray-300 py-2 text-gray-900" asp-for="Input.Email" autocomplete="username" aria-required="true" />
                     <span asp-validation-for="Input.Email" class="text-red-500"></span>
@@ -24,7 +24,7 @@
             </div>
 
             <div>
-                <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                <label for="password" class="block text-sm font-semibold leading-6 text-gray-900">Password</label>
                 <div class="mt-2">
                     <input class="block w-full border border-gray-300 py-2 text-gray-900" asp-for="Input.Password" autocomplete="current-password" aria-required="true" />
                     <span asp-validation-for="Input.Password" class="text-red-500"></span>

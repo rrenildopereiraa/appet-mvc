@@ -4,30 +4,30 @@
 }
 <ul class="space-y-4">
     <li>
-        <a class="block text-sm font-medium text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">
+        <a class="block text-sm font-semibold text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">
             Profile
         </a>
     </li>
     <li>
-        <a class="block text-sm font-medium text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">
+        <a class="block text-sm font-semibold text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">
             Email
         </a>
     </li>
     <li>
-        <a class="block text-sm font-medium text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">
+        <a class="block text-sm font-semibold text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">
             Password
         </a>
     </li>
     @if (hasExternalLogins)
     {
         <li>
-            <a class="block text-sm font-medium text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.ExternalLoginsNavClass(ViewContext)" id="external-logins" asp-page="./ExternalLogins">
+            <a class="block text-sm font-semibold text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.ExternalLoginsNavClass(ViewContext)" id="external-logins" asp-page="./ExternalLogins">
                 External logins
             </a>
         </li>
     }
     <li>
-        <a class="block text-sm font-medium text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">
+        <a class="block text-sm font-semibold text-gray-500 hover:text-sky-600 px-4 py-2 @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">
             Personal data
         </a>
     </li>
