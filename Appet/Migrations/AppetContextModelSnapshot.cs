@@ -268,13 +268,13 @@ namespace Appet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f2c315dd-141b-419d-a59d-4975b3b05309",
+                            Id = "8c41766d-e443-4e82-b561-c648205f8f78",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "bcf8e912-7533-4797-ab86-7eadf282ccd8",
+                            Id = "0a01243c-66c9-4497-a561-6984af53660f",
                             Name = "Client",
                             NormalizedName = "Client"
                         });
